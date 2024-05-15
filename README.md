@@ -25,8 +25,9 @@
 
 # ZeroMQ | Receive a request for quote
  The following code block is how to receive the message and the quote.
+ You must use "recv_string()" otherwise, you'll get a random byte attached to the quote.
  ```
- message = socket.recv()
+ message = socket.recv_string()
  ```
 
 # UML Diagram
