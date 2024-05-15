@@ -20,9 +20,14 @@
  The following code block will send a request to the microservice and assumes that the above code block is established.
  ```
  socket.send(b"Any message you want here")
- message = socket.recv()
  ```
  The message variable will be a Python string variable that is the quote.
+
+# ZeroMQ | Receive a request for quote
+ The following code block is how to receive the message and the quote.
+ ```
+ message = socket.recv()
+ ```
 
 # UML Diagram
 ![UML Diagram](https://github.com/kvn-lee/CS361-Sprint2/assets/32992749/cccaca27-8876-4223-99d9-405968803e4f)
