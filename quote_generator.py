@@ -9,7 +9,7 @@ context = zmq.Context()
 socket = context.socket(zmq.REP)
 
 # Bind socket to main program
-socket.bind("tcp://*:5000")
+socket.bind("tcp://localhost:5000")
 
 
 def GenerateQuote():
@@ -31,5 +31,7 @@ while True:
     print("Received request: %s" % request)
 
     quote = GenerateQuote()
+    print(quote)
 
-    socket.send(b"Here is your quote: " + quote)
+    socket.send_string(quote)
+    print("Request sent")
